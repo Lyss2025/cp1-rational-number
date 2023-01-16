@@ -1,0 +1,104 @@
+{
+	"tests": [
+	{
+		"name": "Build",
+		"setup": "",
+		"run": "make main && ls main",
+		"input": "",
+		"output": "main",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "1/5",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "1 5",
+		"output": "1/5",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "1/5 (reduction)",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "2 10",
+		"output": "1/5",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "5/4",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "35 28",
+		"output": "5/4",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "5",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "5 1",
+		"output": "5",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "0/5",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "0 5",
+		"output": "0",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "5/0",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "5 0",
+		"output": "NaN",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "-1/2",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "-1 2",
+		"output": "-1/2",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "-1/2 (alternate)",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "1 -2",
+		"output": "-1/2",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	},
+	{
+		"name": "1/2",
+		"setup": "make main",
+		"run": "timeout 5 ./main",
+		"input": "-1 -2",
+		"output": "1/2",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 5
+	}
+	]
+}

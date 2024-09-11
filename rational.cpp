@@ -18,6 +18,20 @@ void division::simplify(int num1, int num2){
         cout <<num1 << "/" << num2 << endl;
     }
     else{
+        int gcf;
+        gcf = num1/num2;
         
+        if ((gcf%num2) == 0 ){
+            num1 = num1/gcf;
+            num2 = num2/gcf;
+            if ((num1 || num2) < 0){
+                cout << "-" << num1 << "/" << num2 << endl;
+            }
+            else{
+                cout << num1 << "/" << num2 << endl;
+            }
+        }
+
+
     }
 }

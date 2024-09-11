@@ -14,5 +14,10 @@ void division::oneDenom(int num1){
 }
 
 void division::simplify(int num1, int num2){
-    cout <<"i dont know";
+    if (num1 ==1){
+        cout <<num1 << "/" << num2 << endl;
+    }
+    else{
+        
+    }
 }
